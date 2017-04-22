@@ -128,6 +128,10 @@ Video.prototype.showErr = function(msg) {
 	alert(msg);
 }
 
+if(window.location.protocol != 'https:') {
+	window.location = 'https:' + window.location.href.substring(window.location.protocol.length);
+}
+
 new Video({
 	width: 320,
 	height: 240,
