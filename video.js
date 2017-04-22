@@ -44,6 +44,9 @@ function Video(opts) {
 			throw('Invalid container ID');
 		}
 	}
+	if(window.location.protocol !='https:') {
+		throw('This script should be run on secure server (https)');
+	}
 
 
 	this.video = document.createElement('video');
